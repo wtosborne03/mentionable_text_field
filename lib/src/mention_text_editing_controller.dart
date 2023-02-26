@@ -128,8 +128,9 @@ class MentionTextEditingController extends TextEditingController {
   }
 
   /// Expose Mention Queue in order to use it in app
-  Queue<Mentionable> mentionQueueValues() =>
-      Queue<Mentionable>.from(_storedMentionables);
+  List<Mentionable> mentionQueueValues() {
+      return Queue<Mentionable>.from(_storedMentionables).toList();
+  }
   
   /// Get the real value of the field with the mentions transformed
   /// thanks to [Mentionable.buildMention].
