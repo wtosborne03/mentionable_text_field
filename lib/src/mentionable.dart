@@ -11,6 +11,9 @@ abstract class Mentionable {
   /// Text that will be input after @ character in
   /// [TextField] to show mention.
   String get mentionLabel;
+  
+  //ground_truth id
+  String get ground_id;
 
   /// Way to render mention as a String in
   /// the TextField final result.
